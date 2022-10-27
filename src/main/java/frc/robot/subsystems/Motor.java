@@ -4,30 +4,30 @@
 
 package frc.robot.subsystems;
 
-import com.ctre.phoenix.motorcontrol.ControlMode;
-import com.ctre.phoenix.motorcontrol.can.TalonFX;
-
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Motor extends SubsystemBase {
-  private TalonFX motor;
+  // Create a field for the motor
+  //
 
-  /** Creates a new Motors. */
+  /** Creates a new Motor. */
   public Motor() {
-    motor = new TalonFX(5);
+    //
   }
 
+  /** Set the motor to a given speed. */
   public void run(double speed) {
-    motor.set(ControlMode.PercentOutput, speed);
+    //
   }
 
+  /** Stop the motor. */
   public void stop() {
-    motor.set(ControlMode.PercentOutput, 0);
+    //
   }
 
+  /** Log the motor's percent output to SmartDashboard. */
   public void log() {
-    SmartDashboard.putNumber("Percent Output:", motor.getMotorOutputPercent());
+    //
   }
 
   @Override

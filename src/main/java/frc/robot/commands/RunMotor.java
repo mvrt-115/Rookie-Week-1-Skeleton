@@ -8,12 +8,12 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.Motor;
 
 public class RunMotor extends CommandBase {
-  private Motor motor;
+  // Create a field for the Motor subsystem
+  //
 
-  /** Creates a new RunMotor. */
+  /** Creates a new RunMotor with a given Motor subsystem. */
   public RunMotor(Motor m) {
-    motor = m;
-    addRequirements(motor);
+    //
     // Use addRequirements() here to declare subsystem dependencies.
   }
 
@@ -24,13 +24,15 @@ public class RunMotor extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    motor.run(0.2);
+    // Run the motor at 0.2 speed
+    //
   }
 
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
-    motor.stop();
+    // Stop the motor
+    //
   }
 
   // Returns true when the command should end.
